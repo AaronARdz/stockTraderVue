@@ -8,7 +8,7 @@
                         <input type="number" 
                         class="form-control" 
                         placeholder="Quantity"
-                        v-model="quantity"
+                        v-model.number="quantity"
                         :class="{danger: insufficientFunds}">
                     </div>
                     <div class="float-right">
@@ -44,6 +44,7 @@
         methods: {
             buyStock() {
                 const order = {
+                    stockName: this.stock.name,
                     stockId: this.stock.id,
                     stockPrice: this.stock.price,
                     quantity: this.quantity
