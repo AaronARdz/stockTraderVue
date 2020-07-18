@@ -18,6 +18,8 @@
         },
         components: {
             appStock: Stock
+        },
+        created() {
         }
     }
 </script>

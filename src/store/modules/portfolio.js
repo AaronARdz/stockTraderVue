@@ -42,7 +42,7 @@ const actions = {
 const getters = {
     stockPortfolio (state, getters) {
         return state.stocks.map(stock => {
-            const record = getters.stocks.find(element => element.id == stock.id)
+            const record = state.stocks.find(element => element.id == stock.id)
             return {
                 id: stock.id,
                 quantity: stock.quantity,
